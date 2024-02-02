@@ -1,0 +1,162 @@
+/* Variabile CSS pentru culori și fonturi */
+:root {
+  --primary-color: #007bff; /* Albastru vibrant */
+  --secondary-color: #6c757d; /* Gri */
+  --background-color: #f8f9fa; /* Gri deschis */
+  --text-color: #212529; /* Gri închis pentru text */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+}
+
+/* Resetare stiluri și box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stiluri de bază pentru body */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container principal și grid responsiv */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* Navigație și meniu */
+nav {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Stiluri pentru butoane */
+.button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background: var(--primary-color);
+}
+
+/* Formulare și control formular */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+/* Stiluri pentru carduri */
+.card {
+  background: white;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.75rem 1.25rem;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+/* Media queries pentru responsivitate */
+@media screen and (max-width: 768px) {
+  .grid {
+  grid-template-columns: 1fr;
+  }
+  
+  nav {
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  nav a {
+  margin-top: 10px;
+  }
+  }
+  
+  /* Stiluri pentru imagini */
+  img {
+  max-width: 100%;
+  height: auto;
+  }
+  
+  /* Păstrarea dimensiunilor originale pentru imagini într-un container specific */
+  .image-container img {
+  width: auto; /* Nu redimensionați lățimea */
+  height: auto; /* Nu redimensionați înălțimea */
+  max-width: 100%; /* Asigurați-vă că nu depășește lățimea containerului */
+  }
+  
+  /* Footer */
+  footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 30px;
+  }
+  
+  /* Link-uri */
+  a {
+  color: var(--primary-color);
+  text-decoration: none;
+  }
+  
+  a:hover {
+  text-decoration: underline;
+  }
+  
+  /* Utilitare pentru spațiere și aliniere */
+  .mt-1 { margin-top: 1rem; }
+  .mb-1 { margin-bottom: 1rem; }
+  .text-center { text-align: center; }
